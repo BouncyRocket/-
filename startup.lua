@@ -11,7 +11,7 @@ function ison(n)
      		print("Success")
      		ws.close()
      		iscon = '1'
-     		shell.execute("index.lua",ws)
+     		shell.execute("index ".. n)
      		
   	else 
      		print("Failed :(")
