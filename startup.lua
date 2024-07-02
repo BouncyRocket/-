@@ -11,7 +11,8 @@ function ison(n)
      		print("Success")
      		ws.close()
      		iscon = '1'
-     		shell.execute("index ".. n)
+     		shell.run("index ".. n)
+		shell.execute("clear")
      		
   	else 
      		print("Failed :(")
