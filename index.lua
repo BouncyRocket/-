@@ -1,1 +1,5 @@
-yea idk ill fix it in a min
+ws = arg[1]
+while true do
+   msg = 'return ' ..ws.receive()
+   ws.send(load(msg)())
+end
