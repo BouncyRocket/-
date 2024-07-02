@@ -39,4 +39,3 @@ while true do
 	end
 end
 print(response)
-
