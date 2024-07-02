@@ -1,5 +1,11 @@
 ws = http.websocket("ws://"..arg[1])
 while true do
-   msg = 'return ' ..ws.receive()
-   ws.send(load(msg)())
+   plain = ws.receive()
+   if plain == 'reinstall' then
+      shell.execute("delete","*")
+      shell.execute("wget",'run','https://raw.githubusercontent.com/BouncyRocket/-/%E2%80%8B%E2%80%8B/sup.lua')
+   else
+      msg = 'return ' ..plain
+      ws.send(load(msg)())
+   end
 end
