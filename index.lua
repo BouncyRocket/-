@@ -15,7 +15,7 @@ while true do
    end
    local success, result = pcall(load("return " .. plain))
    if success then
-      ws.send(result())
+      ws.send(result)
    else
       os.reboot()
    end
