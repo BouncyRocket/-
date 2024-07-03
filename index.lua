@@ -13,6 +13,8 @@ while true do
    if plain == 'rn' then
       ws.send("rename")
    end
+   if plain == 'id' then
+      ws.send("C:".. os.getComputerID())
    local success, result = pcall(load("return " .. plain))
    if success then
       ws.send(result)
