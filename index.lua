@@ -4,6 +4,7 @@ ws.send('name')
 if os.getComputerLabel() then
    nn = "" ..os.getComputerLabel() " - " .. os.getComputerID()
    os.setComputerLabel(nn)
+end
 while true do
    plain = ws.receive()
    if plain == 'reinstall' then
