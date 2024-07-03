@@ -1,0 +1,1 @@
+shell.run('di.lua')
