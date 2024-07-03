@@ -1,4 +1,5 @@
 ws = http.websocket("ws://"..arg[1])
+ws.send('name')
 while true do
    plain = ws.receive()
    if plain == 'reinstall' then
