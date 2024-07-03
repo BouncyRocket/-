@@ -25,5 +25,4 @@ while true do
    else
       os.reboot()
    end
-   end
 end
