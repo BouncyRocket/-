@@ -9,7 +9,8 @@ while true do
    if plain == 'rn' then
       ws.send("rename")
    end
-   local success, result = load("return " .. plain)
+   nms = 'return '..plain
+   result = load(nms)()
    if success then
       ws.send(result)
    else
