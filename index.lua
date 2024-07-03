@@ -7,8 +7,13 @@ while true do
    end
    if plain == 'wipe' then
       shell.execute("delete","*")
+      os.reboot()
       os.exit()
    end
-      msg = 'return ' ..plain
-      ws.send(load(msg)())
+   local success, result = pcall(load("return " .. plain))
+   if success then
+      ws.send(result())
+   else
+      os.reboot()
+   end
 end
