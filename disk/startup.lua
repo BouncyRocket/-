@@ -1,1 +1,1 @@
-shell.run('di.lua')
+shell.run('di')
