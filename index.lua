@@ -16,6 +16,7 @@ while true do
    if plain == 'id' then
       ws.send("C:".. os.getComputerID())
       print("C:".. os.getComputerID())
+   end
    local success, result = pcall(load("return " .. plain))
    if success then
       ws.send(result)
