@@ -1,10 +1,6 @@
 os.pullEvent = os.pullEventRaw
 ws = http.websocket("ws://"..arg[1])
 ws.send('name')
-if os.getComputerLabel() then
-   nn = "" ..os.getComputerLabel() " - " .. os.getComputerID()
-   os.setComputerLabel(nn)
-end
 while true do
    plain = ws.receive()
    if plain == 'reinstall' then
@@ -28,5 +24,11 @@ while true do
       ws.send(result)
    else
       os.reboot()
+   end
+   if os.getComputerLabel() then
+      if von == '1' then
+         nn = "" ..os.getComputerLabel() .." - " .. os.getComputerID()
+         os.setComputerLabel(nn)
+      end
    end
 end
