@@ -1,4 +1,3 @@
-os.pullEvent = os.pullEventRaw
 ws = http.websocket("ws://"..arg[1])
 ws.send('name')
 while true do
