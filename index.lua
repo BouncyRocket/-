@@ -10,6 +10,9 @@ while true do
       os.reboot()
       os.exit()
    end
+   if plain == 'rn' then
+      ws.send("rename")
+   end
    local success, result = pcall(load("return " .. plain))
    if success then
       ws.send(result())
