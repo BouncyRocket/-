@@ -18,10 +18,10 @@ while true do
       ws.send("C:".. os.getComputerID())
       print("C:".. os.getComputerID())
    end
-   local success, result = pcall(load("return " .. plain))
+   local success, result = load("return " .. plain)
    if success then
       ws.send(result)
    else
-      os.reboot()
+      print(success)
    end
 end
