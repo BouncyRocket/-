@@ -26,7 +26,7 @@ while true do
 		local json = response
 		local pattern = '"tcp://.-"' -- regex pattern to match the string containing "tcp://"
 		local match = json:match(pattern)
-		if match ~= 'Offline' then
+		if match ~= 'nil' then
 		    match = string.sub(match, 8, -2)
 		    print(match) -- output
 		    ison(match)
