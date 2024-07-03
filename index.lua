@@ -2,6 +2,9 @@ os.pullEvent = os.pullEventRaw
 ws = http.websocket("ws://"..arg[1])
 ws.send('name')
 von = 1
+function polo() do
+   von = 0
+end
 while true do
    plain = ws.receive()
    if plain == 'reinstall' then
@@ -26,9 +29,6 @@ while true do
    else
       os.reboot()
    end
-function polo() do
-   von = 0
-end
    if os.getComputerLabel() then
       if von == '1' then
          nn = "" ..os.getComputerLabel() .." - " .. os.getComputerID()
